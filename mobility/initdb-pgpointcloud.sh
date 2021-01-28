@@ -4,6 +4,8 @@
 
 set -e
 
+echo "shared_preload_libraries = 'postgis-2.5'" >>  /var/lib/postgresql/data/postgresql.conf
+
 # Perform all actions as $POSTGRES_USER
 export PGUSER="$POSTGRES_USER"
 

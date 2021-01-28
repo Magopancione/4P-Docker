@@ -133,7 +133,6 @@ RUN cd /usr/local/src/MobilityDB/build && \
 	make && \
 	make install
 
-RUN echo "shared_preload_libraries = 'postgis-2.5'" >>  /var/lib/postgresql/data/postgresql.conf
 WORKDIR /var/lib/postgresql/data/
 ADD ./initdb-pgpointcloud.sh /docker-entrypoint-initdb.d/10_pgpointcloud.sh
 
